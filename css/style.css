@@ -29,6 +29,9 @@
   --mistake:       #9B5A4C;
   --mistake-soft:  #F1DED9;
 
+  --success:       #3F8F5C;
+  --success-soft:  #E7F1E9;
+
   --info-bg:     #ECEFFA;
   --info-border: #5C6BC0;
   --info-text:   #33407A;
@@ -382,5 +385,99 @@ body.has-sidebar{ padding-left: var(--sidebar-w); }
 .note-card.mistake .label{ color: var(--mistake); }
 
 .note-inline{ font-size: 0.85rem; color: var(--text-faint); margin-top: 8px; }
+
+/* ---------------- Practice questions ---------------- */
+.quiz-score-bar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--surface-2);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+  flex-wrap: wrap;
+}
+.quiz-score-bar .score-value{
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--accent);
+}
+.quiz-reset-btn{
+  background: none;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+.quiz-reset-btn:hover{ border-color: var(--accent); color: var(--accent); }
+
+.q-card{
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  margin-bottom: 16px;
+  background: var(--surface);
+}
+.q-card .q-meta{
+  font-size: 0.75rem;
+  color: var(--text-faint);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.q-card .q-passage{
+  font-style: italic;
+  color: var(--text-dim);
+  margin-bottom: 14px;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+.q-card .q-prompt{ font-weight: 600; margin-bottom: 14px; white-space: pre-line; }
+
+.q-choices{ display: flex; flex-direction: column; gap: 8px; }
+.q-choice{
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--surface);
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text);
+}
+.q-choice:hover:not([disabled]){ border-color: var(--border-strong); }
+.q-choice .choice-letter{
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--text-faint);
+  flex-shrink: 0;
+}
+.q-choice.correct{ border-color: var(--success); background: var(--success-soft); }
+.q-choice.incorrect{ border-color: var(--mistake); background: var(--mistake-soft); }
+.q-choice[disabled]{ cursor: default; }
+
+.q-explain{
+  margin-top: 14px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: var(--surface-2);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  display: none;
+}
+.q-explain.show{ display: block; }
+.q-explain .explain-label{ font-family: var(--font-display); font-weight: 600; margin-bottom: 6px; }
+.q-explain.correct-explain .explain-label{ color: var(--success); }
+.q-explain.incorrect-explain .explain-label{ color: var(--mistake); }
 
 @media (prefers-reduced-motion: reduce){ *{ transition: none !important; } }

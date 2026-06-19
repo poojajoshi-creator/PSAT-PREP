@@ -170,9 +170,22 @@
     </article>
 
   </section>
+
+  <section class="section" id="practice">
+    <div class="section-head">
+      <h2>Practice questions</h2>
+      <span class="pill">20 questions</span>
+    </div>
+    <div id="quiz-root"></div>
+  </section>
 </main>
 
 <script>window.PAGE = 'ii'; window.SITE_ROOT = '../';</script>
 <script src="../js/sidebar.js"></script>
+<script src="data/ii-questions.js"></script>
+<script src="../js/quiz.js"></script>
+<script>
+  window.initQuiz({ containerId: 'quiz-root', questions: window.QUIZ_DATA, storageKey: 'psat-quiz-ii' });
+</script>
 </body>
 </html>
