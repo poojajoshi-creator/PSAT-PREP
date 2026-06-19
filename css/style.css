@@ -437,6 +437,21 @@ body.has-sidebar{ padding-left: var(--sidebar-w); }
   line-height: 1.6;
   white-space: pre-line;
 }
+.q-passage table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-style: normal;
+  font-family: var(--font-body);
+}
+.q-passage th, .q-passage td{
+  border: 1px solid var(--border-strong);
+  padding: 6px 10px;
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+.q-passage th{ background: var(--surface-2); font-weight: 600; }
 .q-card .q-prompt{ font-weight: 600; margin-bottom: 14px; white-space: pre-line; }
 
 .q-choices{ display: flex; flex-direction: column; gap: 8px; }

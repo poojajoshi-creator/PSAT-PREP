@@ -30,7 +30,11 @@
       '</div>' +
       '<div class="nav-group">' +
         '<span class="nav-group-label">Math</span>' +
-        item(root + 'math/index.html', '\u2022', 'Overview (coming soon)', 'math') +
+        item(root + 'math/index.html', '\u2022', 'Overview', 'math-overview') +
+        item(root + 'math/algebra.html', '1', 'Algebra', 'alg') +
+        item(root + 'math/advanced-math.html', '2', 'Advanced Math', 'adv') +
+        item(root + 'math/problem-solving-data-analysis.html', '3', 'Problem-Solving & Data Analysis', 'psda') +
+        item(root + 'math/geometry-trigonometry.html', '4', 'Geometry and Trigonometry', 'geo') +
       '</div>' +
     '</nav>' +
     '<div class="nav-foot">All dates &amp; countdowns shown in US Eastern time.</div>';

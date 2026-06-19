@@ -10,17 +10,24 @@ GitHub Pages.
 
 ```
 index.html              Home page, with countdowns to both tests
-css/style.css            Shared design system (colors, type, components)
+css/style.css            Shared design system (colors, type, components, quiz styles)
 js/sidebar.js              Injects the left sidebar nav on every page
 js/countdown.js            Countdown logic, rendered into the hero stat row (always US Eastern time)
+js/quiz.js                 Shared practice-question engine (scoring, explanations, localStorage progress)
 english/
   index.html             English section hub (4 domain cards)
   information-and-ideas.html
   craft-and-structure.html
   expression-of-ideas.html
   standard-english-conventions.html
+  data/                  20-question bank per domain (ii, cs, eoi, sec)
 math/
-  index.html             Placeholder — math learning pages come next
+  index.html             Math section hub (4 domain cards)
+  algebra.html
+  advanced-math.html
+  problem-solving-data-analysis.html
+  geometry-trigonometry.html
+  data/                  20-question bank per domain (algebra, advanced-math, psda, geometry)
 ```
 
 ## Deploying to GitHub Pages
@@ -48,6 +55,7 @@ math/
 
 ## What's next
 
-- Math learning pages (same concept / watch-for / mistakes format)
-- Practice question drills per skill, with scoring
-- Progress tracking (likely saved in the browser via `localStorage`)
+- More practice questions, or harder/easier variants of the existing ones
+- A "review only what I got wrong" filter on the practice sections
+- Full-length timed practice tests
+- Progress dashboard summarizing scores across all domains
